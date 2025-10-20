@@ -1,151 +1,316 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Manuel García Rodríguez - Portfolio</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
-    <style>
-        body {
-            background-color: #121212;
-            color: #f0f0f0;
-            font-family: 'Segoe UI', sans-serif;
-        }
-        header {
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('foto_perfil.png') center/cover no-repeat;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            position: relative;
-        }
-        header h1 {
-            font-size: 3rem;
-            animation: fadeInDown 2s;
-        }
-        section {
-            padding: 60px 20px;
-        }
-        .card {
-            background-color: #1e1e1e;
-            border: none;
-            transition: transform 0.3s ease;
-        }
-        .card:hover {
-            transform: scale(1.05);
-        }
-        @keyframes fadeInDown {
-            from { opacity: 0; transform: translateY(-50px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        #langBtn {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            z-index: 10;
-        }
-    </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Manuel García Rodríguez — Portfolio</title>
+  <meta name="description" content="Portfolio de Manuel García Rodríguez (DAW). Proyectos, conocimientos y contacto." />
+  <meta name="theme-color" content="#121212">
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:title" content="Manuel García Rodríguez — Portfolio" />
+  <meta property="og:description" content="Proyectos, conocimientos y contacto." />
+  <meta property="og:image" content="img/banner1.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="es_ES" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Manuel García Rodríguez — Portfolio" />
+  <meta name="twitter:description" content="Proyectos, conocimientos y contacto." />
+  <meta name="twitter:image" content="img/banner1.png" />
+
+  <!-- Canonical (ajusta cuando tengas dominio) -->
+  <link rel="canonical" href="https://tudominio.com/" />
+
+  <!-- Preload del banner (PNG seguro) -->
+  <link rel="preload" as="image" href="img/banner1.png" />
+
+  <!-- Favicon and app icons -->
+  <link rel="icon" type="image/svg+xml" href="img/favicon.svg" />
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png" />
+  <link rel="manifest" href="site.webmanifest" />
+
+  <!-- Preconnect -->
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+
+  <!-- Bootstrap & Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
-    <header style="background-image: url('banner1.png'); background-size: cover; background-position: center; height: auto;">
-        <img alt="Banner" class="img-fluid w-100" src="banner1.png" style="object-fit: cover; height: auto; max-height: 500px;" />
-        <button id="langBtn" class="btn btn-outline-light">EN</button>
-    </header>
+  <!-- Enlace de accesibilidad -->
+  <a class="skip-link" href="#sobre-mi" data-es="Saltar al contenido" data-en="Skip to content">Saltar al contenido</a>
 
-    <section class="container" id="sobre-mi">
-        <h2 data-es="Sobre mí" data-en="About Me">Sobre mí</h2>
-        <p data-es="Soy una persona curiosa, constante y con muchas ganas de aprender. Me gusta trabajar en proyectos donde pueda combinar <strong>creatividad y lógica</strong>, y disfruto mucho optimizando código y explorando nuevas tecnologías."
-           data-en="I am a curious, consistent person, eager to learn. I enjoy working on projects where I can combine <strong>creativity and logic</strong>, and I love optimizing code and exploring new technologies.">
-           Soy una persona curiosa, constante y con muchas ganas de aprender. Me gusta trabajar en proyectos donde pueda combinar <strong>creatividad y lógica</strong>, y disfruto mucho optimizando código y explorando nuevas tecnologías.
-        </p>
-    </section>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold text-white" href="#top" aria-label="Inicio">
+        <i class="fa-solid fa-code"></i> <span>Manuel</span>
+      </a>
 
-    <section class="container" id="conocimientos">
-        <h2 data-es="Conocimientos" data-en="Skills">Conocimientos</h2>
-        <div class="row">
-            <div class="col-md-6">
-                <h4 data-es="1º DAW" data-en="1st Year DAW">1º DAW</h4>
-                <ul>
-                    <li data-es="HTML, CSS, JavaScript" data-en="HTML, CSS, JavaScript">HTML, CSS, JavaScript</li>
-                    <li data-es="Programación en Java" data-en="Java Programming">Programación en Java</li>
-                    <li data-es="Bases de datos (MySQL)" data-en="Databases (MySQL)">Bases de datos (MySQL)</li>
-                    <li data-es="Entornos de desarrollo" data-en="Development Environments">Entornos de desarrollo</li>
-                </ul>
-            </div>
-            <div class="col-md-6">
-                <h4 data-es="2º DAW" data-en="2nd Year DAW">2º DAW</h4>
-                <ul>
-                    <li data-es="PHP, Java, Python" data-en="PHP, Java, Python">PHP, Java, Python</li>
-                    <li data-es="Desarrollo de interfaces" data-en="Interface Development">Desarrollo de interfaces</li>
-                    <li data-es="Servicios y procesos" data-en="Services and Processes">Servicios y procesos</li>
-                    <li data-es="Despliegue de aplicaciones" data-en="Application Deployment">Despliegue de aplicaciones</li>
-                </ul>
-            </div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav"
+              aria-controls="nav" aria-expanded="false" aria-label="Abrir navegación">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="nav">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="#sobre-mi" data-es="Sobre mí" data-en="About">Sobre mí</a></li>
+          <li class="nav-item"><a class="nav-link" href="#conocimientos" data-es="Conocimientos" data-en="Skills">Conocimientos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#proyectos" data-es="Proyectos" data-en="Projects">Proyectos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contacto" data-es="Contacto" data-en="Contact">Contacto</a></li>
+        </ul>
+        <div class="ms-lg-3 mt-3 mt-lg-0">
+          <button id="langBtn" class="btn btn-sm btn-outline-light btn-lang" aria-label="Cambiar idioma" aria-pressed="false">EN</button>
         </div>
-    </section>
+      </div>
+    </div>
+  </nav>
 
-    <section class="container py-5" id="proyectos">
-        <h2 data-es="Proyectos" data-en="Projects">Proyectos</h2>
-        <div class="card shadow-sm mb-4">
-            <div class="card-body">
-                <h5 class="card-title">
-                    <a class="text-decoration-none text-info" href="https://mookase.com">Mookase.com</a>
-                </h5>
+  <!-- Hero: sin oscurecer y 100% responsive (PNG seguro) -->
+  <header id="top" class="hero">
+    <div class="hero__inner container">
+      <div class="hero__banner">
+        <img src="img/banner1.png" alt="Banner de Manuel García Rodríguez" class="hero-img"
+             width="1600" height="600" loading="eager" decoding="async" />
+      </div>
+      <div class="hero__cta d-flex justify-content-center cta-wrap flex-wrap mt-3">
+        <a href="#proyectos" class="btn btn-primary">
+          <i class="fa-solid fa-rocket me-2"></i><span data-es="Ver proyectos" data-en="View projects">Ver proyectos</span>
+        </a>
+        <a href="cv.pdf" class="btn btn-outline-light" target="_blank" rel="noopener noreferrer">
+          <i class="fa-solid fa-file-arrow-down me-2"></i><span data-es="Descargar CV" data-en="Download CV">Descargar CV</span>
+        </a>
+      </div>
+
+      <!-- SEO/Accesibilidad (oculto visualmente) -->
+      <h1 class="visually-hidden" data-es="Manuel García Rodríguez" data-en="Manuel García Rodríguez">Manuel García Rodríguez</h1>
+      <p class="visually-hidden"
+         data-es="Desarrollador en formación (DAW). Me apasiona combinar creatividad y lógica para crear soluciones útiles."
+         data-en="Developer in training (DAW). I love combining creativity and logic to build useful solutions.">
+        Desarrollador en formación (DAW). Me apasiona combinar creatividad y lógica para crear soluciones útiles.
+      </p>
+    </div>
+  </header>
+
+  <!-- Sobre mí -->
+  <section class="section" id="sobre-mi">
+    <div class="container">
+      <h2 data-es="Sobre mí" data-en="About Me">Sobre mí</h2>
+      <p class="lead"
+         data-es="Soy una persona curiosa, constante y con muchas ganas de aprender. Disfruto optimizando código, resolviendo problemas y explorando tecnologías modernas."
+         data-en="I am a curious, consistent person, eager to learn. I enjoy optimizing code, solving problems, and exploring modern technologies.">
+         Soy una persona curiosa, constante y con muchas ganas de aprender. Disfruto optimizando código, resolviendo problemas y explorando tecnologías modernas.
+      </p>
+    </div>
+  </section>
+
+  <!-- Conocimientos -->
+  <section class="section bg-dark" id="conocimientos">
+    <div class="container">
+      <h2 data-es="Conocimientos" data-en="Skills">Conocimientos</h2>
+
+      <div class="row g-4">
+        <div class="col-md-6">
+          <div class="p-4 rounded-3 block">
+            <h4 class="mb-3" data-es="1º DAW" data-en="1st Year DAW">1º DAW</h4>
+            <div>
+              <span class="skill-badge"><span class="skill-dot"></span> HTML</span>
+              <span class="skill-badge"><span class="skill-dot"></span> CSS</span>
+              <span class="skill-badge"><span class="skill-dot"></span> JavaScript</span>
+              <span class="skill-badge"><span class="skill-dot"></span> Java</span>
+              <span class="skill-badge"><span class="skill-dot"></span> MySQL</span>
+              <span class="skill-badge"><span class="skill-dot"></span> Entornos de desarrollo</span>
             </div>
+          </div>
         </div>
-    </section>
 
-    <section class="container" id="contacto">
-        <h2 data-es="Contacto" data-en="Contact">Contacto</h2>
-        <form action="https://formspree.io/f/xgvndvbz" method="POST">
-            <div class="mb-3">
-                <label class="form-label" for="name" data-es="Nombre" data-en="Name">Nombre</label>
-                <input class="form-control" name="name" required type="text" />
+        <div class="col-md-6">
+          <div class="p-4 rounded-3 block">
+            <h4 class="mb-3" data-es="2º DAW" data-en="2nd Year DAW">2º DAW</h4>
+            <div>
+              <span class="skill-badge"><span class="skill-dot"></span> PHP</span>
+              <span class="skill-badge"><span class="skill-dot"></span> Java</span>
+              <span class="skill-badge"><span class="skill-dot"></span> Python</span>
+              <span class="skill-badge" data-es="<span class='skill-dot'></span> Desarrollo de interfaces"
+                                    data-en="<span class='skill-dot'></span> Interface development">
+                <span class="skill-dot"></span> Desarrollo de interfaces
+              </span>
+              <span class="skill-badge" data-es="<span class='skill-dot'></span> Servicios y procesos"
+                                    data-en="<span class='skill-dot'></span> Services & processes">
+                <span class="skill-dot"></span> Servicios y procesos
+              </span>
+              <span class="skill-badge" data-es="<span class='skill-dot'></span> Despliegue de aplicaciones"
+                                    data-en="<span class='skill-dot'></span> App deployment">
+                <span class="skill-dot"></span> Despliegue de aplicaciones
+              </span>
             </div>
-            <div class="mb-3">
-                <label class="form-label" for="email" data-es="Correo electrónico" data-en="Email">Correo electrónico</label>
-                <input class="form-control" name="email" required type="email" />
-            </div>
-            <div class="mb-3">
-                <label class="form-label" for="message" data-es="Mensaje" data-en="Message">Mensaje</label>
-                <textarea class="form-control" name="message" required rows="4"></textarea>
-            </div>
-            <button class="btn btn-primary" type="submit" data-es="Enviar" data-en="Send">Enviar</button>
-        </form>
-    </section>
+          </div>
+        </div>
+      </div>
 
-    <script src="https://unpkg.com/scrollreveal"></script>
-    <script>
-        ScrollReveal().reveal('section', { delay: 300, distance: '50px', origin: 'bottom' });
+    </div>
+  </section>
 
-        const langBtn = document.getElementById('langBtn');
-        let currentLang = 'es';
+  <!-- Proyectos -->
+  <section class="section" id="proyectos">
+    <div class="container">
+      <h2 data-es="Proyectos" data-en="Projects">Proyectos</h2>
 
-        langBtn.addEventListener('click', () => {
-            currentLang = currentLang === 'es' ? 'en' : 'es';
-            langBtn.textContent = currentLang === 'es' ? 'EN' : 'ES';
-            document.querySelectorAll('[data-es]').forEach(el => {
-                el.innerHTML = el.getAttribute(`data-${currentLang}`);
-            });
-        });
-    </script>
-
-    <footer class="bg-dark text-white text-center py-4">
-        <div class="container">
-            <p>Contacto:   
-                <a href="mailto:mg8118934@gmail.com" style="text-decoration: none; color: inherit;">
-                    <i class="fas fa-envelope"></i> <span data-es="Envíame un correo" data-en="Send me an email">Envíame un correo</span>
-                </a> |
-                <a href="https://www.linkedin.com/in/manuel-garc%C3%ADa-rodr%C3%ADguez-51a86033b/" style="text-decoration: none; color: inherit;">
-                    <i class="fab fa-linkedin"></i> LinkedIn
-                </a> |
-                <a href="https://github.com/spacecrf" style="text-decoration: none; color: inherit;">
-                    <i class="fab fa-github"></i> GitHub
+      <div class="row g-4">
+        <!-- Proyecto: Mookase -->
+        <div class="col-md-6 col-lg-4">
+          <article class="card h-100">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title mb-2">
+                <a class="text-decoration-none link-info" href="https://mookase.com" target="_blank" rel="noopener noreferrer">
+                  Mookase.com
                 </a>
-            </p>
+              </h5>
+              <p class="card-text flex-grow-1" data-es="E-comerce desallado en PrestaShop. Rol: desarrollo frontend y optimización."
+                                              data-en="E-commerce developed in PrestaShop. Role: frontend development and optimization.">
+                 E-comerce desallado en PrestaShop. Rol: desarrollo frontend y optimización.
+              </p>
+              <div class="mb-3">
+                <span class="badge text-bg-dark border">HTML</span>
+                <span class="badge text-bg-dark border">CSS</span>
+                <span class="badge text-bg-dark border">JS</span>
+              </div>
+              <div class="mt-auto d-flex gap-2">
+                <a href="https://mookase.com" class="btn btn-sm btn-primary" target="_blank" rel="noopener noreferrer">
+                  <i class="fa-solid fa-arrow-up-right-from-square me-1"></i>
+                  <span data-es="Visitar" data-en="Visit">Visitar</span>
+                </a>
+                <a href="https://github.com/spacecrf" class="btn btn-sm btn-outline-light" target="_blank" rel="noopener noreferrer">
+                  <i class="fa-brands fa-github me-1"></i> GitHub
+                </a>
+              </div>
+            </div>
+          </article>
         </div>
-    </footer>
+
+        <!-- Duplica este bloque para más proyectos -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Contacto -->
+  <section class="section bg-dark" id="contacto">
+    <div class="container">
+      <h2 data-es="Contacto" data-en="Contact">Contacto</h2>
+      <div class="row g-4">
+        <div class="col-lg-6">
+          <form action="https://formspree.io/f/xgvndvbz" method="POST" class="card p-4">
+            <div class="mb-3">
+              <label class="form-label" for="name" data-es="Nombre" data-en="Name">Nombre</label>
+              <input class="form-control" id="name" name="name" required type="text" autocomplete="name" />
+            </div>
+            <div class="mb-3">
+              <label class="form-label" for="email" data-es="Correo electrónico" data-en="Email">Correo electrónico</label>
+              <input class="form-control" id="email" name="email" required type="email" autocomplete="email" />
+            </div>
+            <div class="mb-3">
+              <label class="form-label" for="message" data-es="Mensaje" data-en="Message">Mensaje</label>
+              <textarea class="form-control" id="message" name="message" required rows="4"></textarea>
+            </div>
+
+            <!-- Honeypot anti-spam -->
+            <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+
+            <!-- Botón Enviar azul (coherente con el resto) -->
+            <button class="btn btn-primary" type="submit" data-es="Enviar" data-en="Send">Enviar</button>
+
+            <!-- Alertas de resultado -->
+            <div id="formAlert" class="alert mt-3 d-none" role="alert"
+                 data-es-exito="¡Gracias! He recibido tu mensaje."
+                 data-en-exito="Thanks! I got your message."
+                 data-es-error="Ups, algo no fue bien. Inténtalo de nuevo."
+                 data-en-error="Oops, something went wrong. Please try again.">
+            </div>
+          </form>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="card p-4 h-100">
+            <h5 class="mb-3" data-es="También puedes encontrarme" data-en="You can also find me">También puedes encontrarme</h5>
+            <ul class="list-unstyled">
+              <li class="mb-2">
+                <a href="mailto:mg8118934@gmail.com" class="text-decoration-none text-white">
+                  <i class="fas fa-envelope me-2"></i> <span data-es="Envíame un correo" data-en="Send me an email">Envíame un correo</span>
+                </a>
+              </li>
+              <li class="mb-2">
+                <a href="https://www.linkedin.com/in/manuel-garc%C3%ADa-rodr%C3%ADguez-51a86033b/" class="text-decoration-none text-white" target="_blank" rel="noopener noreferrer">
+                  <i class="fab fa-linkedin me-2"></i> LinkedIn
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/spacecrf" class="text-decoration-none text-white" target="_blank" rel="noopener noreferrer">
+                  <i class="fab fa-github me-2"></i> GitHub
+                </a>
+              </li>
+            </ul>
+            <p class="text-muted small mt-3" data-es="Tiempo de respuesta habitual: 24-48h." data-en="Typical response time: 24-48h.">
+              Tiempo de respuesta habitual: 24-48h.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-4">
+    <div class="container text-center">
+      <p class="mb-1">© <span id="year"></span> Manuel García Rodríguez</p>
+      <p class="small mb-0">
+        
+ <span data-es="Impulsado por creatividad y pasión por el desarrollo" data-en="Driven by creativity and passion for development">
+    Impulsado por creatividad y pasión por el desarrollo
+  </span>.
+  <i class="fa-solid fa-code text-primary"></i>
+
+      </p>
+    </div>
+  </footer>
+
+  <!-- Botón volver arriba -->
+  <button id="backToTop" class="btn btn-primary" type="button" aria-label="Volver arriba"
+          style="position:fixed; right:16px; bottom:16px; display:none; z-index:9999">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <!-- JSON-LD Person -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Manuel García Rodríguez",
+    "jobTitle": "Desarrollador (DAW)",
+    "url": "https://mookase.com",
+    "sameAs": [
+      "https://www.linkedin.com/in/manuel-garc%C3%ADa-rodr%C3%ADguez-51a86033b/",
+      "https://github.com/spacecrf"
+    ]
+  }
+  </script>
+
+  <!-- Vendor scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" defer></script>
+  <script src="https://unpkg.com/scrollreveal" defer></script>
+
+  <!-- App script -->
+  <script src="scripts/main.js" defer></script>
+
+  <noscript>
+    <div style="background:#222;color:#fff;padding:10px;text-align:center">
+      Para una mejor experiencia habilita JavaScript. / Enable JavaScript for a better experience.
+    </div>
+  </noscript>
 </body>
 </html>

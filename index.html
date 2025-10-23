@@ -6,8 +6,6 @@
   <title>Manuel García Rodríguez — Portfolio</title>
   <meta name="description" content="Portfolio de Manuel García Rodríguez (DAW). Proyectos, conocimientos y contacto." />
   <meta name="theme-color" content="#121212">
-
-  <!-- Open Graph / Twitter -->
   <meta property="og:title" content="Manuel García Rodríguez — Portfolio" />
   <meta property="og:description" content="Proyectos, conocimientos y contacto." />
   <meta property="og:image" content="img/banner1.png" />
@@ -17,47 +15,31 @@
   <meta name="twitter:title" content="Manuel García Rodríguez — Portfolio" />
   <meta name="twitter:description" content="Proyectos, conocimientos y contacto." />
   <meta name="twitter:image" content="img/banner1.png" />
-
-  <!-- Canonical (ajusta cuando tengas dominio) -->
   <link rel="canonical" href="https://tudominio.com/" />
-
-  <!-- Preload del banner (PNG seguro) -->
   <link rel="preload" as="image" href="img/banner1.png" />
-
-  <!-- Favicon and app icons -->
   <link rel="icon" type="image/svg+xml" href="img/favicon.svg" />
   <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png" />
   <link rel="manifest" href="site.webmanifest" />
-
-  <!-- Preconnect -->
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
-
-  <!-- Bootstrap & Icons -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
-
-  <!-- Styles -->
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
-  <!-- Enlace de accesibilidad -->
   <a class="skip-link" href="#sobre-mi" data-es="Saltar al contenido" data-en="Skip to content">Saltar al contenido</a>
 
-  <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
     <div class="container">
       <a class="navbar-brand fw-bold text-white" href="#top" aria-label="Inicio">
         <i class="fa-solid fa-code"></i> <span>Manuel</span>
       </a>
-
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav"
               aria-controls="nav" aria-expanded="false" aria-label="Abrir navegación">
         <span class="navbar-toggler-icon"></span>
       </button>
-
       <div class="collapse navbar-collapse" id="nav">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
           <li class="nav-item"><a class="nav-link" href="#sobre-mi" data-es="Sobre mí" data-en="About">Sobre mí</a></li>
@@ -72,7 +54,6 @@
     </div>
   </nav>
 
-  <!-- Hero: sin oscurecer y 100% responsive (PNG seguro) -->
   <header id="top" class="hero">
     <div class="hero__inner container">
       <div class="hero__banner">
@@ -87,8 +68,6 @@
           <i class="fa-solid fa-file-arrow-down me-2"></i><span data-es="Descargar CV" data-en="Download CV">Descargar CV</span>
         </a>
       </div>
-
-      <!-- SEO/Accesibilidad (oculto visualmente) -->
       <h1 class="visually-hidden" data-es="Manuel García Rodríguez" data-en="Manuel García Rodríguez">Manuel García Rodríguez</h1>
       <p class="visually-hidden"
          data-es="Desarrollador en formación (DAW). Me apasiona combinar creatividad y lógica para crear soluciones útiles."
@@ -98,7 +77,6 @@
     </div>
   </header>
 
-  <!-- Sobre mí -->
   <section class="section" id="sobre-mi">
     <div class="container">
       <h2 data-es="Sobre mí" data-en="About Me">Sobre mí</h2>
@@ -110,11 +88,9 @@
     </div>
   </section>
 
-  <!-- Conocimientos -->
   <section class="section bg-dark" id="conocimientos">
     <div class="container">
       <h2 data-es="Conocimientos" data-en="Skills">Conocimientos</h2>
-
       <div class="row g-4">
         <div class="col-md-6">
           <div class="p-4 rounded-3 block">
@@ -129,7 +105,6 @@
             </div>
           </div>
         </div>
-
         <div class="col-md-6">
           <div class="p-4 rounded-3 block">
             <h4 class="mb-3" data-es="2º DAW" data-en="2nd Year DAW">2º DAW</h4>
@@ -153,17 +128,13 @@
           </div>
         </div>
       </div>
-
     </div>
   </section>
 
-  <!-- Proyectos -->
   <section class="section" id="proyectos">
     <div class="container">
       <h2 data-es="Proyectos" data-en="Projects">Proyectos</h2>
-
       <div class="row g-4">
-        <!-- Proyecto: Mookase -->
         <div class="col-md-6 col-lg-4">
           <article class="card h-100">
             <div class="card-body d-flex flex-column">
@@ -193,13 +164,10 @@
             </div>
           </article>
         </div>
-
-        <!-- Duplica este bloque para más proyectos -->
       </div>
     </div>
   </section>
 
-  <!-- Contacto -->
   <section class="section bg-dark" id="contacto">
     <div class="container">
       <h2 data-es="Contacto" data-en="Contact">Contacto</h2>
@@ -218,14 +186,8 @@
               <label class="form-label" for="message" data-es="Mensaje" data-en="Message">Mensaje</label>
               <textarea class="form-control" id="message" name="message" required rows="4"></textarea>
             </div>
-
-            <!-- Honeypot anti-spam -->
             <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
-
-            <!-- Botón Enviar azul (coherente con el resto) -->
             <button class="btn btn-primary" type="submit" data-es="Enviar" data-en="Send">Enviar</button>
-
-            <!-- Alertas de resultado -->
             <div id="formAlert" class="alert mt-3 d-none" role="alert"
                  data-es-exito="¡Gracias! He recibido tu mensaje."
                  data-en-exito="Thanks! I got your message."
@@ -234,7 +196,6 @@
             </div>
           </form>
         </div>
-
         <div class="col-lg-6">
           <div class="card p-4 h-100">
             <h5 class="mb-3" data-es="También puedes encontrarme" data-en="You can also find me">También puedes encontrarme</h5>
@@ -264,28 +225,23 @@
     </div>
   </section>
 
-  <!-- Footer -->
   <footer class="py-4">
     <div class="container text-center">
       <p class="mb-1">© <span id="year"></span> Manuel García Rodríguez</p>
       <p class="small mb-0">
-        
- <span data-es="Impulsado por creatividad y pasión por el desarrollo" data-en="Driven by creativity and passion for development">
-    Impulsado por creatividad y pasión por el desarrollo
-  </span>.
-  <i class="fa-solid fa-code text-primary"></i>
-
+        <span data-es="Impulsado por creatividad y pasión por el desarrollo" data-en="Driven by creativity and passion for development">
+          Impulsado por creatividad y pasión por el desarrollo
+        </span>.
+        <i class="fa-solid fa-code text-primary"></i>
       </p>
     </div>
   </footer>
 
-  <!-- Botón volver arriba -->
   <button id="backToTop" class="btn btn-primary" type="button" aria-label="Volver arriba"
           style="position:fixed; right:16px; bottom:16px; display:none; z-index:9999">
     <i class="fa-solid fa-arrow-up"></i>
   </button>
 
-  <!-- JSON-LD Person -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -300,11 +256,8 @@
   }
   </script>
 
-  <!-- Vendor scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" defer></script>
   <script src="https://unpkg.com/scrollreveal" defer></script>
-
-  <!-- App script -->
   <script src="scripts/main.js" defer></script>
 
   <noscript>

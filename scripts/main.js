@@ -1,8 +1,6 @@
-// Helpers
 const $ = (sel, parent = document) => parent.querySelector(sel);
 const $$ = (sel, parent = document) => Array.from(parent.querySelectorAll(sel));
 
-// Safe localStorage access
 const storage = {
   get(key, fallback = null) {
     try { return localStorage.getItem(key) ?? fallback; } catch { return fallback; }
@@ -13,17 +11,14 @@ const storage = {
 };
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Año en footer
   const yearEl = $('#year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-  // Lazy loading para <img>
   document.querySelectorAll('img').forEach(img => {
     if (!img.hasAttribute('loading')) img.setAttribute('loading', 'lazy');
     img.decoding = 'async';
   });
 
-  // ScrollReveal (si no reduce motion)
   const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if (!reduce && typeof ScrollReveal !== 'undefined') {
     const sr = ScrollReveal();
@@ -33,7 +28,6 @@ document.addEventListener('DOMContentLoaded', () => {
     sr.reveal('#contacto form, #contacto .card', { interval: 120, distance: '28px', origin: 'bottom', duration: 700, easing: 'ease-out' });
   }
 
-  // Idioma (data-es / data-en) + persistencia
   (function setupLanguage() {
     const langBtn = $('#langBtn');
     let currentLang = storage.get('lang', 'es');
@@ -59,11 +53,9 @@ document.addEventListener('DOMContentLoaded', () => {
       applyLang(currentLang === 'es' ? 'en' : 'es');
     });
 
-    // Aplicar al cargar
     applyLang(currentLang);
   })();
 
-  // Navbar: activar enlace según sección visible y cerrar en móvil
   (function setupActiveNav() {
     const navLinks = $$('.navbar .nav-link[href^="#"]');
     const sections = navLinks.map(a => $(a.getAttribute('href'))).filter(Boolean);
@@ -83,7 +75,6 @@ document.addEventListener('DOMContentLoaded', () => {
       sections.forEach(sec => obs.observe(sec));
     }
 
-    // Cerrar menú en móvil al navegar
     navLinks.forEach(link => {
       link.addEventListener('click', () => {
         const nav = $('#nav');
@@ -95,7 +86,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   })();
 
-  // Back to top
   (function setupBackToTop() {
     const btn = document.getElementById('backToTop');
     if (!btn) return;
@@ -105,7 +95,6 @@ document.addEventListener('DOMContentLoaded', () => {
     btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
   })();
 
-  // Manejo de envío del formulario con fetch (Formspree) + multi-idioma
   (function setupFormspree() {
     const form = document.querySelector('#contacto form');
     const alertBox = document.getElementById('formAlert');
